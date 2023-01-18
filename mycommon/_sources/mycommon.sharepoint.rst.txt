@@ -1,0 +1,8 @@
+mycommon.sharepoint module
+==========================
+
+.. automodule:: mycommon.sharepoint
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

@@ -1,0 +1,8 @@
+mycommon.filesystem.\_osfs module
+=================================
+
+.. automodule:: mycommon.filesystem._osfs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

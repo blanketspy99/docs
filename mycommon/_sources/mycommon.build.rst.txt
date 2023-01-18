@@ -1,0 +1,19 @@
+mycommon.build package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mycommon.build.jenkins
+
+Module contents
+---------------
+
+.. automodule:: mycommon.build
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

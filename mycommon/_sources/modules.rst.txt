@@ -1,0 +1,7 @@
+mycommon
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   mycommon

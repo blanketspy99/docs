@@ -1,0 +1,29 @@
+mycommon package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mycommon.build
+   mycommon.filesystem
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mycommon.sharepoint
+   mycommon.utils
+
+Module contents
+---------------
+
+.. automodule:: mycommon
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

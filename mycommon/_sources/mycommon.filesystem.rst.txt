@@ -1,0 +1,21 @@
+mycommon.filesystem package
+===========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mycommon.filesystem._base
+   mycommon.filesystem._osfs
+   mycommon.filesystem._s3fs
+
+Module contents
+---------------
+
+.. automodule:: mycommon.filesystem
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

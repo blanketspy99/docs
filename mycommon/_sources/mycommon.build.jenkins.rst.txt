@@ -1,0 +1,8 @@
+mycommon.build.jenkins module
+=============================
+
+.. automodule:: mycommon.build.jenkins
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
