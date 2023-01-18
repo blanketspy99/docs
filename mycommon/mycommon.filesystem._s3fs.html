@@ -2,8 +2,9 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.sharepoint module" href="mycommon.sharepoint.html" /><link rel="prev" title="mycommon.filesystem._osfs module" href="mycommon.filesystem._osfs.html" />
+        <link rel="canonical" href="/docs/mycommon/mycommon.filesystem._s3fs.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>mycommon.filesystem._s3fs module - mycommon 1.0 documentation</title>
@@ -225,10 +226,10 @@
 <p>Initialize a S3 filesystem object with default root base path prefix “” as normal filesystem.
 Note: It is ideal to follow Unix convention irrespective of operating system.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>FileSystem</strong> (<a class="reference internal" href="mycommon.filesystem._base.html#mycommon.filesystem._base.FileSystem" title="mycommon.filesystem._base.FileSystem"><em>FileSystem</em></a>) – </p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>Exception</strong> – </p>
 </dd>
 </dl>
@@ -251,10 +252,10 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <span class="sig-name descname"><span class="pre">get_abs_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.get_abs_path" title="Permalink to this definition">#</a></dt>
 <dd><p>Get absolute path of given path</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – s3 prefix to use, by default None</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -265,16 +266,16 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <span class="sig-name descname"><span class="pre">get_file_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.get_file_head" title="Permalink to this definition">#</a></dt>
 <dd><p>_summary_</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – s3 prefix to use, by default None</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>File metadata</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>Exception</strong> – Raises exception if given prefix is not a file</p>
 </dd>
 </dl>
@@ -285,13 +286,13 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.is_dir" title="Permalink to this definition">#</a></dt>
 <dd><p>Checks if given prefix is a directory</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – s3 prefix to use, by default <cite>None</cite></p></li>
 <li><p><strong>delimiter</strong> (<em>str</em><em>, </em><em>optional</em>) – folder delimiter (logical seperation), by default <cite>‘/’</cite></p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>bool</p>
 </dd>
 </dl>
@@ -302,13 +303,13 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.is_file" title="Permalink to this definition">#</a></dt>
 <dd><p>Checks if given prefix is a file</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – s3 prefix to use, by default <cite>None</cite></p></li>
 <li><p><strong>delimiter</strong> (<em>str</em><em>, </em><em>optional</em>) – folder delimiter (logical seperation), by default <cite>‘/’</cite></p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>bool</p>
 </dd>
 </dl>
@@ -319,16 +320,16 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.listdir" title="Permalink to this definition">#</a></dt>
 <dd><p>List contents of a given prefix</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – s3 prefix to use, by default <cite>‘’</cite></p></li>
 <li><p><strong>delimiter</strong> (<em>str</em><em>, </em><em>optional</em>) – folder delimiter (logical seperation), by default <cite>‘/’</cite></p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Contents of a given prefix</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
@@ -338,7 +339,7 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.prefix">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.prefix" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd>
 </dl>
@@ -349,19 +350,19 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_prefix</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
 <dd><p>Method call to get object data in binary format along with few metadata, returned by get_file_head method.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>input_file_prefix</strong> (<em>str</em>) – s3 prefix to use</p></li>
 <li><p><strong>content_range</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – requires bytes content range objects. Ex: “bytes 0-499/500”, by default None</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Response object dict contains output of get_file_head along with ‘Body’ key containing binary data.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>Exception</strong> – Raise Exception, if prefix is not a file path</p>
 </dd>
 </dl>
@@ -381,7 +382,7 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <span class="sig-name descname"><span class="pre">write_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10485760</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">26214400</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.write_file_content" title="Permalink to this definition">#</a></dt>
 <dd><p>Use this method to write binary data into given filepath.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> (<em>str</em>) – prefix to write data into</p></li>
 <li><p><strong>data</strong> (<em>file_like_object</em>) – binary buffer data that needs to be written into file should implement read method</p></li>
@@ -393,10 +394,10 @@ This parameter is meaningful when chunk_write=True, by default 4**10*4</p></li>
 <li><p><strong>chunk_write_threshold</strong> (<em>int</em><em>, </em><em>optional</em>) – Max amount of bytes that needs to be written into filesystem in each chunk, by default 4**10*25</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Object file head metadata (get_file_head)</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>

@@ -2,8 +2,9 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="mycommon.sharepoint module" href="mycommon.sharepoint.html" />
+        <link rel="canonical" href="/docs/mycommon/mycommon.utils.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>mycommon.utils module - mycommon 1.0 documentation</title>
@@ -216,7 +217,7 @@
 <span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">copy_file_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_object_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.copy_file_object" title="Permalink to this definition">#</a></dt>
 <dd><p>Copies data from one source_fs to other taking full source data in memory.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>object_path</strong> (<em>str</em>) – Name of the object that needs to be copied or path of the object name, if the source_fs path is different.</p></li>
 <li><p><strong>source_fs</strong> (<a class="reference internal" href="mycommon.filesystem._base.html#mycommon.filesystem._base.FileSystem" title="mycommon.filesystem._base.FileSystem"><em>FileSystem</em></a>) – should be a subclass of FileSystem object</p></li>
@@ -231,13 +232,13 @@
 <li><p><strong>write_byte_size</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Leave to default which can handle by type for Filesystem, by default ‘default’</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Target Object Metadata</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>Exception</strong> – Varies by filesystem</p>
 </dd>
 </dl>
@@ -249,7 +250,7 @@
 <dd><p>Copies data from one source_fs to other as streaming data. This method is primarly useful when the
 object size is large and to conserve system memory.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>object_path</strong> (<em>str</em>) – Name of the object that needs to be copied or path of the object name, if the source_fs path is different.</p></li>
 <li><p><strong>source_fs</strong> (<a class="reference internal" href="mycommon.filesystem._base.html#mycommon.filesystem._base.FileSystem" title="mycommon.filesystem._base.FileSystem"><em>FileSystem</em></a>) – Should be a subclass of FileSystem object</p></li>
@@ -267,13 +268,13 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
 <li><p><strong>write_byte_size</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Leave to default which can handle by type for Filesystem, by default ‘default’</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Object metadata</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>Exception</strong> – Varies by filesystem</p>
 </dd>
 </dl>
@@ -287,13 +288,13 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ssl</strong> (<em>bool</em><em>, </em><em>optional</em>) – by default True</p></li>
 <li><p><strong>proxies</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>optional</em>) – by default None</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>requests.Session</p>
 </dd>
 </dl>
