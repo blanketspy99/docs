@@ -16,7 +16,6 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   mycommon.sharepoint
    mycommon.utils
 
 Module contents
