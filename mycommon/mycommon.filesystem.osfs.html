@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.filesystem._s3fs module" href="mycommon.filesystem._s3fs.html" /><link rel="prev" title="mycommon.filesystem._base module" href="mycommon.filesystem._base.html" />
-        <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.filesystem._osfs.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.filesystem.s3fs module" href="mycommon.filesystem.s3fs.html" /><link rel="prev" title="mycommon.filesystem package" href="mycommon.filesystem.html" />
+        <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.filesystem.osfs.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>mycommon.filesystem._osfs module - mycommon 1.0 documentation</title>
+        <title>mycommon.filesystem.osfs module - mycommon 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -164,10 +164,9 @@
 </ul>
 </li>
 <li class="toctree-l3 current has-children"><a class="reference internal" href="mycommon.filesystem.html">mycommon.filesystem package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._base.html">mycommon.filesystem._base module</a></li>
-<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">mycommon.filesystem._osfs module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._s3fs.html">mycommon.filesystem._s3fs module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._spfs.html">mycommon.filesystem._spfs module</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">mycommon.filesystem.osfs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.s3fs.html">mycommon.filesystem.s3fs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.spfs.html">mycommon.filesystem.spfs module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mycommon.utils.html">mycommon.utils module</a></li>
@@ -209,11 +208,11 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-mycommon.filesystem._osfs">
-<span id="mycommon-filesystem-osfs-module"></span><h1>mycommon.filesystem._osfs module<a class="headerlink" href="#module-mycommon.filesystem._osfs" title="Permalink to this heading">#</a></h1>
+          <section id="module-mycommon.filesystem.osfs">
+<span id="mycommon-filesystem-osfs-module"></span><h1>mycommon.filesystem.osfs module<a class="headerlink" href="#module-mycommon.filesystem.osfs" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem._osfs.</span></span><span class="sig-name descname"><span class="pre">OSFileSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.osfs.</span></span><span class="sig-name descname"><span class="pre">OSFileSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="mycommon.filesystem._base.html#mycommon.filesystem._base.FileSystem" title="mycommon.filesystem._base.FileSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileSystem</span></code></a></p>
 <p>Initialize a local Unix/WIndows filesystem object with default root base path.</p>
 <dl class="field-list simple">
@@ -228,8 +227,8 @@ myfs=OSFileSystem(‘/Users’)  # set path to /Users ~= C://Users</p></li>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.chdir">
-<span class="sig-name descname"><span class="pre">chdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.chdir" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.chdir">
+<span class="sig-name descname"><span class="pre">chdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.chdir" title="Permalink to this definition">#</a></dt>
 <dd><p>Changes the OSFileSystem base path.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -245,8 +244,8 @@ myfs=OSFileSystem(‘/Users’)  # set path to /Users ~= C://Users</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.get_abs_path">
-<span class="sig-name descname"><span class="pre">get_abs_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">os_based</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.get_abs_path" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.get_abs_path">
+<span class="sig-name descname"><span class="pre">get_abs_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">os_based</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.get_abs_path" title="Permalink to this definition">#</a></dt>
 <dd><p>Return absolute path for a give path:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -273,8 +272,8 @@ Current OSFileSystem object handles the path irrespective of Operating system</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.get_cwd">
-<span class="sig-name descname"><span class="pre">get_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">os_based</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.get_cwd" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.get_cwd">
+<span class="sig-name descname"><span class="pre">get_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">os_based</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.get_cwd" title="Permalink to this definition">#</a></dt>
 <dd><p>Get absolute current working directory</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -290,8 +289,8 @@ Current OSFileSystem object handles the path irrespective of Operating system</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.get_file_head">
-<span class="sig-name descname"><span class="pre">get_file_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.get_file_head" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.get_file_head">
+<span class="sig-name descname"><span class="pre">get_file_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.get_file_head" title="Permalink to this definition">#</a></dt>
 <dd><p>Get metadata of file. Returns file details such as size and type or MD5</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -314,8 +313,8 @@ Path =&gt; Given input file path (input_file_path)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.is_dir">
-<span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.is_dir" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.is_dir">
+<span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.is_dir" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns True if dir path exists else False</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -328,8 +327,8 @@ Path =&gt; Given input file path (input_file_path)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.is_file">
-<span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.is_file" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.is_file">
+<span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.is_file" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns True if file path exists else False</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -342,8 +341,8 @@ Path =&gt; Given input file path (input_file_path)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.listdir">
-<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.listdir" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.listdir" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns list of items in given path</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -356,8 +355,8 @@ Path =&gt; Given input file path (input_file_path)</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.path">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.path" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.path" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -366,8 +365,8 @@ Path =&gt; Given input file path (input_file_path)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.read_file_content">
-<span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.read_file_content">
+<span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Method call to get object data in binary format along with few metadata,</dt><dd><p>returned by get_file_head method.</p>
 </dd>
@@ -393,8 +392,8 @@ key containing file like object which implements read method.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._osfs.OSFileSystem.write_file_content">
-<span class="sig-name descname"><span class="pre">write_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4194304</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._osfs.OSFileSystem.write_file_content" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.write_file_content">
+<span class="sig-name descname"><span class="pre">write_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4194304</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.write_file_content" title="Permalink to this definition">#</a></dt>
 <dd><p>Use this method to write binary data into given filepath.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -432,23 +431,23 @@ This parameter is meaningful when chunk_write=True, by default 4**10*4</p></li>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="mycommon.filesystem._s3fs.html">
+          <a class="next-page" href="mycommon.filesystem.s3fs.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">mycommon.filesystem._s3fs module</div>
+                <div class="title">mycommon.filesystem.s3fs module</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="mycommon.filesystem._base.html">
+          <a class="prev-page" href="mycommon.filesystem.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">mycommon.filesystem._base module</div>
+                <div class="title">mycommon.filesystem package</div>
                 
               </div>
             </a>
@@ -482,18 +481,18 @@ This parameter is meaningful when chunk_write=True, by default 4**10*4</p></li>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">mycommon.filesystem._osfs module</a><ul>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem"><code class="docutils literal notranslate"><span class="pre">OSFileSystem</span></code></a><ul>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.chdir"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.chdir()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.get_abs_path"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.get_abs_path()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.get_cwd"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.get_cwd()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.get_file_head"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.get_file_head()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.is_dir()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.is_file()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.listdir"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.listdir()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.path"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.path</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.read_file_content"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.read_file_content()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._osfs.OSFileSystem.write_file_content"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.write_file_content()</span></code></a></li>
+<li><a class="reference internal" href="#">mycommon.filesystem.osfs module</a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem"><code class="docutils literal notranslate"><span class="pre">OSFileSystem</span></code></a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.chdir"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.chdir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.get_abs_path"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.get_abs_path()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.get_cwd"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.get_cwd()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.get_file_head"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.get_file_head()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.is_dir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.is_file()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.listdir"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.listdir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.path"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.path</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.read_file_content"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.read_file_content()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.osfs.OSFileSystem.write_file_content"><code class="docutils literal notranslate"><span class="pre">OSFileSystem.write_file_content()</span></code></a></li>
 </ul>
 </li>
 </ul>

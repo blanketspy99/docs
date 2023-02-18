@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.filesystem._spfs module" href="mycommon.filesystem._spfs.html" /><link rel="prev" title="mycommon.filesystem._osfs module" href="mycommon.filesystem._osfs.html" />
-        <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.filesystem._s3fs.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.filesystem.spfs module" href="mycommon.filesystem.spfs.html" /><link rel="prev" title="mycommon.filesystem.osfs module" href="mycommon.filesystem.osfs.html" />
+        <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.filesystem.s3fs.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>mycommon.filesystem._s3fs module - mycommon 1.0 documentation</title>
+        <title>mycommon.filesystem.s3fs module - mycommon 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -164,10 +164,9 @@
 </ul>
 </li>
 <li class="toctree-l3 current has-children"><a class="reference internal" href="mycommon.filesystem.html">mycommon.filesystem package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._base.html">mycommon.filesystem._base module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._osfs.html">mycommon.filesystem._osfs module</a></li>
-<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">mycommon.filesystem._s3fs module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._spfs.html">mycommon.filesystem._spfs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.osfs.html">mycommon.filesystem.osfs module</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">mycommon.filesystem.s3fs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.spfs.html">mycommon.filesystem.spfs module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mycommon.utils.html">mycommon.utils module</a></li>
@@ -209,19 +208,19 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-mycommon.filesystem._s3fs">
-<span id="mycommon-filesystem-s3fs-module"></span><h1>mycommon.filesystem._s3fs module<a class="headerlink" href="#module-mycommon.filesystem._s3fs" title="Permalink to this heading">#</a></h1>
+          <section id="module-mycommon.filesystem.s3fs">
+<span id="mycommon-filesystem-s3fs-module"></span><h1>mycommon.filesystem.s3fs module<a class="headerlink" href="#module-mycommon.filesystem.s3fs" title="Permalink to this heading">#</a></h1>
 <p>This module tries to expose S3 as a normal filesystem.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.ProgressPercentage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem._s3fs.</span></span><span class="sig-name descname"><span class="pre">ProgressPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.ProgressPercentage" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.ProgressPercentage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.s3fs.</span></span><span class="sig-name descname"><span class="pre">ProgressPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.ProgressPercentage" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class object to get progress based to given file size and regular __call__ method</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem._s3fs.</span></span><span class="sig-name descname"><span class="pre">S3FileSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boto3_session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">s3_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.s3fs.</span></span><span class="sig-name descname"><span class="pre">S3FileSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boto3_session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">s3_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="mycommon.filesystem._base.html#mycommon.filesystem._base.FileSystem" title="mycommon.filesystem._base.FileSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileSystem</span></code></a></p>
 <p>Initialize a S3 filesystem object with default root base path prefix “” as normal filesystem.
 Note: It is ideal to follow Unix convention irrespective of operating system.</p>
@@ -248,8 +247,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.get_abs_path">
-<span class="sig-name descname"><span class="pre">get_abs_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.get_abs_path" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.get_abs_path">
+<span class="sig-name descname"><span class="pre">get_abs_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.get_abs_path" title="Permalink to this definition">#</a></dt>
 <dd><p>Get absolute path of given path</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -262,8 +261,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.get_file_head">
-<span class="sig-name descname"><span class="pre">get_file_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.get_file_head" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.get_file_head">
+<span class="sig-name descname"><span class="pre">get_file_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.get_file_head" title="Permalink to this definition">#</a></dt>
 <dd><p>_summary_</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -282,8 +281,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.is_dir">
-<span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.is_dir" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.is_dir">
+<span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.is_dir" title="Permalink to this definition">#</a></dt>
 <dd><p>Checks if given prefix is a directory</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -299,8 +298,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.is_file">
-<span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.is_file" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.is_file">
+<span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.is_file" title="Permalink to this definition">#</a></dt>
 <dd><p>Checks if given prefix is a file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -316,8 +315,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.listdir">
-<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.listdir" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.listdir" title="Permalink to this definition">#</a></dt>
 <dd><p>List contents of a given prefix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -336,8 +335,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.prefix">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.prefix" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.prefix">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.prefix" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -346,8 +345,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.read_file_content">
-<span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_prefix</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.read_file_content">
+<span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_prefix</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
 <dd><p>Method call to get object data in binary format along with few metadata, returned by get_file_head method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -378,8 +377,8 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._s3fs.S3FileSystem.write_file_content">
-<span class="sig-name descname"><span class="pre">write_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10485760</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">26214400</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._s3fs.S3FileSystem.write_file_content" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.write_file_content">
+<span class="sig-name descname"><span class="pre">write_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10485760</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">26214400</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.write_file_content" title="Permalink to this definition">#</a></dt>
 <dd><p>Use this method to write binary data into given filepath.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -413,23 +412,23 @@ This parameter is meaningful when chunk_write=True, by default 4**10*4</p></li>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="mycommon.filesystem._spfs.html">
+          <a class="next-page" href="mycommon.filesystem.spfs.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">mycommon.filesystem._spfs module</div>
+                <div class="title">mycommon.filesystem.spfs module</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="mycommon.filesystem._osfs.html">
+          <a class="prev-page" href="mycommon.filesystem.osfs.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">mycommon.filesystem._osfs module</div>
+                <div class="title">mycommon.filesystem.osfs module</div>
                 
               </div>
             </a>
@@ -463,17 +462,17 @@ This parameter is meaningful when chunk_write=True, by default 4**10*4</p></li>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">mycommon.filesystem._s3fs module</a><ul>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.ProgressPercentage"><code class="docutils literal notranslate"><span class="pre">ProgressPercentage</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem"><code class="docutils literal notranslate"><span class="pre">S3FileSystem</span></code></a><ul>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.get_abs_path"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.get_abs_path()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.get_file_head"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.get_file_head()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.is_dir()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.is_file()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.listdir"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.listdir()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.prefix"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.prefix</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.read_file_content"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.read_file_content()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._s3fs.S3FileSystem.write_file_content"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.write_file_content()</span></code></a></li>
+<li><a class="reference internal" href="#">mycommon.filesystem.s3fs module</a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.ProgressPercentage"><code class="docutils literal notranslate"><span class="pre">ProgressPercentage</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem"><code class="docutils literal notranslate"><span class="pre">S3FileSystem</span></code></a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.get_abs_path"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.get_abs_path()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.get_file_head"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.get_file_head()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.is_dir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.is_file()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.listdir"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.listdir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.prefix"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.prefix</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.read_file_content"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.read_file_content()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.s3fs.S3FileSystem.write_file_content"><code class="docutils literal notranslate"><span class="pre">S3FileSystem.write_file_content()</span></code></a></li>
 </ul>
 </li>
 </ul>

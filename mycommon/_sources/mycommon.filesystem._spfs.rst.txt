@@ -1,8 +1,0 @@
-mycommon.filesystem.\_spfs module
-=================================
-
-.. automodule:: mycommon.filesystem._spfs
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :private-members:

@@ -7,10 +7,9 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   mycommon.filesystem._base
-   mycommon.filesystem._osfs
-   mycommon.filesystem._s3fs
-   mycommon.filesystem._spfs
+   mycommon.filesystem.osfs
+   mycommon.filesystem.s3fs
+   mycommon.filesystem.spfs
 
 Module contents
 ---------------
@@ -19,4 +18,3 @@ Module contents
    :members:
    :undoc-members:
    :show-inheritance:
-   :private-members:

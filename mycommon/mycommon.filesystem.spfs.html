@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.utils module" href="mycommon.utils.html" /><link rel="prev" title="mycommon.filesystem._s3fs module" href="mycommon.filesystem._s3fs.html" />
-        <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.filesystem._spfs.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.utils module" href="mycommon.utils.html" /><link rel="prev" title="mycommon.filesystem.s3fs module" href="mycommon.filesystem.s3fs.html" />
+        <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.filesystem.spfs.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>mycommon.filesystem._spfs module - mycommon 1.0 documentation</title>
+        <title>mycommon.filesystem.spfs module - mycommon 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -164,10 +164,9 @@
 </ul>
 </li>
 <li class="toctree-l3 current has-children"><a class="reference internal" href="mycommon.filesystem.html">mycommon.filesystem package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._base.html">mycommon.filesystem._base module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._osfs.html">mycommon.filesystem._osfs module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem._s3fs.html">mycommon.filesystem._s3fs module</a></li>
-<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">mycommon.filesystem._spfs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.osfs.html">mycommon.filesystem.osfs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.s3fs.html">mycommon.filesystem.s3fs module</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">mycommon.filesystem.spfs module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mycommon.utils.html">mycommon.utils module</a></li>
@@ -209,12 +208,12 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-mycommon.filesystem._spfs">
-<span id="mycommon-filesystem-spfs-module"></span><h1>mycommon.filesystem._spfs module<a class="headerlink" href="#module-mycommon.filesystem._spfs" title="Permalink to this heading">#</a></h1>
+          <section id="module-mycommon.filesystem.spfs">
+<span id="mycommon-filesystem-spfs-module"></span><h1>mycommon.filesystem.spfs module<a class="headerlink" href="#module-mycommon.filesystem.spfs" title="Permalink to this heading">#</a></h1>
 <p>This modules tries to exposes Sharepoint as regular filesystem</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.LocalSharePointCredsCache">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem._spfs.</span></span><span class="sig-name descname"><span class="pre">LocalSharePointCredsCache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.LocalSharePointCredsCache" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.LocalSharePointCredsCache">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.spfs.</span></span><span class="sig-name descname"><span class="pre">LocalSharePointCredsCache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.LocalSharePointCredsCache" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Simple local file based credential cache implementation.</p>
 <dl class="field-list simple">
@@ -223,8 +222,8 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.LocalSharePointCredsCache.read">
-<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.LocalSharePointCredsCache.read" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.LocalSharePointCredsCache.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.LocalSharePointCredsCache.read" title="Permalink to this definition">#</a></dt>
 <dd><p>Get user credentials cache</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -237,8 +236,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.LocalSharePointCredsCache.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.LocalSharePointCredsCache.write" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.LocalSharePointCredsCache.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.LocalSharePointCredsCache.write" title="Permalink to this definition">#</a></dt>
 <dd><p>Updates credentials cache</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -253,8 +252,8 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem._spfs.</span></span><span class="sig-name descname"><span class="pre">SharePointFileSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tenant_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope=[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">documentRoot='Documents'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sitePath=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passwordEnv=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheToken=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_style=&lt;class</span> <span class="pre">'mycommon.filesystem._spfs.LocalSharePointCredsCache'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_auth=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.spfs.</span></span><span class="sig-name descname"><span class="pre">SharePointFileSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tenant_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope=[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">documentRoot='Documents'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sitePath=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passwordEnv=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheToken=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_style=&lt;class</span> <span class="pre">'mycommon.filesystem.spfs.LocalSharePointCredsCache'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_auth=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="mycommon.filesystem._base.html#mycommon.filesystem._base.FileSystem" title="mycommon.filesystem._base.FileSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileSystem</span></code></a></p>
 <p>Initialize sharepoint filesystem as normal filesystem.
 Note: Sharepoint requires authentication, and, current module supports 2 types
@@ -351,35 +350,8 @@ for login , by default True</p></li>
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem._get_refresh_token">
-<span class="sig-name descname"><span class="pre">_get_refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh_token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem._get_refresh_token" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem._retry_authentication_request">
-<span class="sig-name descname"><span class="pre">_retry_authentication_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem._retry_authentication_request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem._verify_username_authenticity">
-<span class="sig-name descname"><span class="pre">_verify_username_authenticity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem._verify_username_authenticity" title="Permalink to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Checks if the logged in user is same as <cite>username</cite> parameter passed.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>Exception</strong> – Raises exception if username doesn’t match with the desired one.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.authenticate">
-<span class="sig-name descname"><span class="pre">authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.authenticate" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.authenticate">
+<span class="sig-name descname"><span class="pre">authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
@@ -388,33 +360,38 @@ for login , by default True</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.authenticate_and_get_tokens">
-<span class="sig-name descname"><span class="pre">authenticate_and_get_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.authenticate_and_get_tokens" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens">
+<span class="sig-name descname"><span class="pre">authenticate_and_get_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.clear_token_cache">
-<span class="sig-name descname"><span class="pre">clear_token_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.clear_token_cache" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache">
+<span class="sig-name descname"><span class="pre">clear_token_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.get_site_and_root_driveid">
-<span class="sig-name descname"><span class="pre">get_site_and_root_driveid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.get_site_and_root_driveid" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid">
+<span class="sig-name descname"><span class="pre">get_site_and_root_driveid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.is_dir">
-<span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.is_dir" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.is_dir">
+<span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_dir" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.is_file">
-<span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.is_file" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.is_file">
+<span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_file" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.listdir" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.sitePath">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sitePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.sitePath" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.sitePath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sitePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.sitePath" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -423,13 +400,13 @@ for login , by default True</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.update_fetch_from_cache">
-<span class="sig-name descname"><span class="pre">update_fetch_from_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.update_fetch_from_cache" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache">
+<span class="sig-name descname"><span class="pre">update_fetch_from_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="mycommon.filesystem._spfs.SharePointFileSystem.username">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem._spfs.SharePointFileSystem.username" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.username">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.username" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -456,14 +433,14 @@ for login , by default True</p></li>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="mycommon.filesystem._s3fs.html">
+          <a class="prev-page" href="mycommon.filesystem.s3fs.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">mycommon.filesystem._s3fs module</div>
+                <div class="title">mycommon.filesystem.s3fs module</div>
                 
               </div>
             </a>
@@ -497,25 +474,23 @@ for login , by default True</p></li>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">mycommon.filesystem._spfs module</a><ul>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.LocalSharePointCredsCache"><code class="docutils literal notranslate"><span class="pre">LocalSharePointCredsCache</span></code></a><ul>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.LocalSharePointCredsCache.read"><code class="docutils literal notranslate"><span class="pre">LocalSharePointCredsCache.read()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.LocalSharePointCredsCache.write"><code class="docutils literal notranslate"><span class="pre">LocalSharePointCredsCache.write()</span></code></a></li>
+<li><a class="reference internal" href="#">mycommon.filesystem.spfs module</a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.LocalSharePointCredsCache"><code class="docutils literal notranslate"><span class="pre">LocalSharePointCredsCache</span></code></a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.LocalSharePointCredsCache.read"><code class="docutils literal notranslate"><span class="pre">LocalSharePointCredsCache.read()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.LocalSharePointCredsCache.write"><code class="docutils literal notranslate"><span class="pre">LocalSharePointCredsCache.write()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem</span></code></a><ul>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem._get_refresh_token"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem._get_refresh_token()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem._retry_authentication_request"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem._retry_authentication_request()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem._verify_username_authenticity"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem._verify_username_authenticity()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.authenticate"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.authenticate_and_get_tokens"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate_and_get_tokens()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.clear_token_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.clear_token_cache()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.get_site_and_root_driveid"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.get_site_and_root_driveid()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_dir()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_file()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.sitePath"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.sitePath</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.update_fetch_from_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.update_fetch_from_cache()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem._spfs.SharePointFileSystem.username"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.username</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem</span></code></a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate_and_get_tokens()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.clear_token_cache()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.get_site_and_root_driveid()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_dir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_file()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.listdir"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.listdir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.sitePath"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.sitePath</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.update_fetch_from_cache()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.username"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.username</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -1,8 +1,0 @@
-mycommon.filesystem.\_s3fs module
-=================================
-
-.. automodule:: mycommon.filesystem._s3fs
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :private-members:
