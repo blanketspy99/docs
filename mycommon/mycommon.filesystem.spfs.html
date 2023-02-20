@@ -350,6 +350,16 @@ for login , by default True</p></li>
 </pre></div>
 </div>
 <dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.async_sync_job_poll">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">async_sync_job_poll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3600</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.async_sync_job_poll" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.authenticate">
 <span class="sig-name descname"><span class="pre">authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
@@ -370,6 +380,68 @@ for login , by default True</p></li>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.copyFile">
+<span class="sig-name descname"><span class="pre">copyFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.copyFile" title="Permalink to this definition">#</a></dt>
+<dd><p>Copies file/folder from one path to another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourceRelFilePath</strong> (<em>str</em>) – Source file path from root of the site.</p></li>
+<li><p><strong>targetRelDirectoryPath</strong> (<em>str</em>) – Target file path from root of the site.</p></li>
+<li><p><strong>newFileName</strong> (<em>_type_</em><em>, </em><em>optional</em>) – Enter filename if you want to copy with a different name, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if operation succeeded else False</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.deleteFile">
+<span class="sig-name descname"><span class="pre">deleteFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.deleteFile" title="Permalink to this definition">#</a></dt>
+<dd><p>Deletes file/folder from the filesystem</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relPath</strong> (<em>str</em>) – Path from root of the site.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns True if deletion is success else False</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.get_file_head">
+<span class="sig-name descname"><span class="pre">get_file_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_file_head" title="Permalink to this definition">#</a></dt>
+<dd><p>Get metadata of file. Returns file details such as size and type or MD5</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_file_path</strong> (<em>str</em>) – relative or abs path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns file details such as size and type or MD5
+Response dict contains:
+ContentLength =&gt; size in bytes
+ContentType =&gt; Type of file guessed, ex: application/json
+Path =&gt; Given input file path (input_file_path)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid">
 <span class="sig-name descname"><span class="pre">get_site_and_root_driveid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -388,6 +460,39 @@ for login , by default True</p></li>
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.listdir">
 <span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.listdir" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.moveFile">
+<span class="sig-name descname"><span class="pre">moveFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.moveFile" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.read_file_content">
+<span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
+<dd><p>Method call to get object data in binary format along with few metadata, returned by get_file_head method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_file_prefix</strong> (<em>str</em>) – Sharepoint filepath to read</p></li>
+<li><p><strong>content_range</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – requires bytes content range objects. Ex: “bytes 0-499/500”, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Response object dict contains output of get_file_head along with ‘Body’ key containing binary data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – Raise Exception, if prefix is not a file path</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.sitePath">
@@ -410,6 +515,40 @@ for login , by default True</p></li>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.write_file_content">
+<span class="sig-name descname"><span class="pre">write_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10485760</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.write_file_content" title="Permalink to this definition">#</a></dt>
+<dd><p>Use this method to write binary data to Sharepoint filepath</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Location of path(including filename) where data needs to be written</p></li>
+<li><p><strong>data</strong> (<em>file like object</em>) – binary buffer data that needs to be written into file should implement read method</p></li>
+<li><p><strong>show_progress</strong> (<em>bool</em><em>, </em><em>optional</em>) – To show progress in write mode. it is set False in append mode., by default True</p></li>
+<li><p><strong>chunk_write</strong> (<em>bool</em><em>, </em><em>optional</em>) – write data into file in chunks., by default True</p></li>
+<li><p><strong>chunk_size</strong> (<em>int</em><em>, </em><em>optional</em>) – amount of chunk that needs to write in each iteration.
+This parameter is meaningful when chunk_write=True, by default 4**10*10 (10MB)</p></li>
+<li><p><strong>content_range</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – requires bytes content range objects. Ex: “bytes 0-499/500”, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>dict</em> – object file head metadata (get_file_head)</p></li>
+<li><p><strong>Note</strong> (If <cite>chunk_write</cite> is True and <cite>content_range</cite> is <cite>None</cite>, then in order to write in chunks, module needs)</p></li>
+<li><p>input data content length in bytes, for which you need to pass addition kwargs containing <cite>ContentLength</cite> in bytes.</p></li>
+<li><p><strong>Example</strong> (<cite>**{‘ContentLength’:1534746734653}</cite>)</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -481,16 +620,23 @@ for login , by default True</p></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem</span></code></a><ul>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.async_sync_job_poll"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.async_sync_job_poll()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate_and_get_tokens()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.clear_token_cache()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.copyFile"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.copyFile()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.deleteFile"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.deleteFile()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_file_head"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.get_file_head()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.get_site_and_root_driveid()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_dir()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_file()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.listdir"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.listdir()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.moveFile"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.moveFile()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.read_file_content"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.read_file_content()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.sitePath"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.sitePath</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.update_fetch_from_cache()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.username"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.username</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.write_file_content"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.write_file_content()</span></code></a></li>
 </ul>
 </li>
 </ul>

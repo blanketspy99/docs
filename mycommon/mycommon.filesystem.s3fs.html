@@ -387,7 +387,7 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <li><p><strong>data</strong> (<em>file_like_object</em>) – binary buffer data that needs to be written into file should implement read method</p></li>
 <li><p><strong>show_progress</strong> (<em>bool</em><em>, </em><em>optional</em>) – To show progress in write mode. it is set False in append mode., by default True</p></li>
 <li><p><strong>chunk_write</strong> (<em>bool</em><em>, </em><em>optional</em>) – write data into file in chunks., by default True</p></li>
-<li><p><strong>chunk_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Amount of chunk that needs to write in each iteration.
+<li><p><strong>chunk_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Amount of chunk that needs to write in each iteration, should be greater than 5MB
 This parameter is meaningful when chunk_write=True, by default 4**10*4</p></li>
 <li><p><strong>content_range</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – requires bytes content range objects. Ex: “bytes 0-499/500”, by default None</p></li>
 <li><p><strong>chunk_write_threshold</strong> (<em>int</em><em>, </em><em>optional</em>) – Max amount of bytes that needs to be written into filesystem in each chunk, by default 4**10*25</p></li>
