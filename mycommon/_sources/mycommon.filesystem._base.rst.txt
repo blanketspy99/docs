@@ -1,8 +1,0 @@
-mycommon.filesystem.\_base module
-=================================
-
-.. automodule:: mycommon.filesystem._base
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :private-members:

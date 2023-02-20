@@ -254,7 +254,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.spfs.</span></span><span class="sig-name descname"><span class="pre">SharePointFileSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tenant_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope=[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">documentRoot='Documents'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sitePath=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passwordEnv=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheToken=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_style=&lt;class</span> <span class="pre">'mycommon.filesystem.spfs.LocalSharePointCredsCache'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_auth=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="mycommon.filesystem._base.html#mycommon.filesystem._base.FileSystem" title="mycommon.filesystem._base.FileSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileSystem</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FileSystem</span></code></p>
 <p>Initialize sharepoint filesystem as normal filesystem.
 Note: Sharepoint requires authentication, and, current module supports 2 types
 1. Username and Password
@@ -275,7 +275,7 @@ Note: Sharepoint requires authentication, and, current module supports 2 types
 <li><p><strong>cache_style</strong> (<em>Callable</em><em>[</em><em>[</em><em>str</em><em>]</em><em>,</em><em>Union</em><em>[</em><em>dict</em><em>,</em><em>None</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Method to fetch/write into cache using given username. LocalSharePointCredsCache is created for you which will
 use user home directory to store credential which can be overridden using <cite>SHAREPOINT_CREDENTIALS_CACHE_FILE</cite>
 environment variable. Note: method should take <cite>username</cite> as parameter and implement <cite>read</cite> &amp; <cite>write</cite>
-function for cache. , by default LocalSharePointCredsCache</p></li>
+function for cache. Sample can be found below , by default LocalSharePointCredsCache</p></li>
 <li><p><strong>with_auth</strong> (<em>bool</em><em>, </em><em>optional</em>) – True if you want to initiate the instance with login else you may want to use <cite>authenticate</cite> later
 for login , by default True</p></li>
 </ul>
@@ -298,8 +298,8 @@ for login , by default True</p></li>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">mycommon.filesystem</span> <span class="kn">import</span> <span class="n">SharePointFileSystem</span>
-<span class="linenos"> 2</span><span class="sd">&#39;&#39;&#39; Intialise filesystem using username and password with token cache enabled (cached to a user homedirectory)</span>
-<span class="linenos"> 3</span><span class="sd">This will enable users to login directly using refresh token for a period of time. &#39;&#39;&#39;</span>
+<span class="linenos"> 2</span><span class="sd">&quot;&quot;&quot;Intialise filesystem using username and password with token cache enabled (cached to a user homedirectory)</span>
+<span class="linenos"> 3</span><span class="sd">This will enable users to login directly using refresh token for a period of time.&quot;&quot;&quot;</span>
 <span class="linenos"> 4</span><span class="n">spfs</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx&quot;</span><span class="p">,</span>
 <span class="linenos"> 5</span>    <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;xxxxxe87-7xxx3-4xxx-xxxxc-xxxxxxxxxx&quot;</span><span class="p">,</span>
 <span class="linenos"> 6</span>    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;mycompany.sharepoint.com&quot;</span><span class="p">,</span>
@@ -309,8 +309,8 @@ for login , by default True</p></li>
 <span class="linenos">10</span>    <span class="n">cacheToken</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&#39;&#39;&#39; Intialise filesystem using username only and authenticate using device flow interactively.</span>
-<span class="linenos"> 2</span><span class="sd">You will be asked to login to an URL and enter device code. &#39;&#39;&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Intialise filesystem using username only and authenticate using device flow interactively.</span>
+<span class="linenos"> 2</span><span class="sd">You will be asked to login to an URL and enter device code.&quot;&quot;&quot;</span>
 <span class="linenos"> 3</span><span class="n">spfs</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx&quot;</span><span class="p">,</span>
 <span class="linenos"> 4</span>    <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;xxxxxe87-7xxx3-4xxx-xxxxc-xxxxxxxxxx&quot;</span><span class="p">,</span>
 <span class="linenos"> 5</span>    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;mycompany.sharepoint.com&quot;</span><span class="p">,</span>
@@ -318,7 +318,7 @@ for login , by default True</p></li>
 <span class="linenos"> 7</span>    <span class="n">sitePath</span><span class="o">=</span><span class="s1">&#39;/sites/Test&#39;</span><span class="p">)</span>
 <span class="linenos"> 8</span><span class="c1"># To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code H8JMK6NS5 to authenticate.</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="sd">&#39;&#39;&#39;Initiate the instance without login&#39;&#39;&#39;</span>
+<span class="linenos">10</span><span class="sd">&quot;&quot;&quot;Initiate the instance without login&quot;&quot;&quot;</span>
 <span class="linenos">11</span><span class="n">spfs2</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;accae888-1d4c-4bc1-a9d0-f1e6bd86ae0f&quot;</span><span class="p">,</span>
 <span class="linenos">12</span>                  <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;37400e87-7a73-459d-807c-9d528775cf74&quot;</span><span class="p">,</span>
 <span class="linenos">13</span>                  <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;headcliff.sharepoint.com&quot;</span><span class="p">,</span>
@@ -332,12 +332,12 @@ for login , by default True</p></li>
 <span class="linenos">21</span>    <span class="n">sender</span> <span class="o">=</span> <span class="s1">&#39;from@fromdomain.com&#39;</span>
 <span class="linenos">22</span>    <span class="n">receivers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;to@todomain.com&#39;</span><span class="p">]</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span>    <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;From: From Person &lt;from@fromdomain.com&gt;</span>
-<span class="linenos">25</span><span class="s1">    To: To Person &lt;to@todomain.com&gt;</span>
-<span class="linenos">26</span><span class="s1">    Subject: SMTP e-mail test</span>
+<span class="linenos">24</span>    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;From: From Person &lt;from@fromdomain.com&gt;</span>
+<span class="linenos">25</span><span class="s2">    To: To Person &lt;to@todomain.com&gt;</span>
+<span class="linenos">26</span><span class="s2">    Subject: SMTP e-mail test</span>
 <span class="linenos">27</span>
-<span class="linenos">28</span><span class="s1">    This is a response for login to filesytem.</span>
-<span class="linenos">29</span><span class="s1">    &#39;&#39;&#39;</span>
+<span class="linenos">28</span><span class="s2">    This is a response for login to filesytem.</span>
+<span class="linenos">29</span><span class="s2">    &quot;&quot;&quot;</span>
 <span class="linenos">30</span>    <span class="n">message</span><span class="o">+=</span><span class="n">response</span> <span class="c1">#add the callback response</span>
 <span class="linenos">31</span>
 <span class="linenos">32</span>    <span class="k">try</span><span class="p">:</span>
@@ -349,12 +349,83 @@ for login , by default True</p></li>
 <span class="linenos">38</span><span class="n">spfs2</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="n">sendToMail</span><span class="p">)</span>
 </pre></div>
 </div>
+<section id="example-of-localsharepointcredscache-module">
+<h3>Example of LocalSharePointCredsCache module<a class="headerlink" href="#example-of-localsharepointcredscache-module" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">LocalSharePointCredsCache</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="sd">&quot;&quot;&quot;Simple local file based credential cache implementation.</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="sd">Parameters</span>
+<span class="linenos"> 5</span><span class="sd">----------</span>
+<span class="linenos"> 6</span><span class="sd">username : str</span>
+<span class="linenos"> 7</span><span class="sd">    Logged in username</span>
+<span class="linenos"> 8</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 9</span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">username</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">10</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="sd">    Parameters</span>
+<span class="linenos">13</span><span class="sd">    ----------</span>
+<span class="linenos">14</span><span class="sd">    username : str</span>
+<span class="linenos">15</span><span class="sd">        Logged in username</span>
+<span class="linenos">16</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">17</span>    <span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="o">=</span><span class="n">username</span>
+<span class="linenos">18</span>    <span class="n">default_credentials_location</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~&quot;</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="n">default_credentials_with_file</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">default_credentials_location</span><span class="p">,</span><span class="s1">&#39;.spfs_creds.json&#39;</span><span class="p">)</span>
+<span class="linenos">20</span>    <span class="n">cache_creds_file</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SHAREPOINT_CREDENTIALS_CACHE_FILE&#39;</span><span class="p">,</span><span class="n">default_credentials_with_file</span><span class="p">)</span>
+<span class="linenos">21</span>    <span class="n">cache_dir</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">cache_creds_file</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">cache_creds_file</span><span class="p">)</span>
+<span class="linenos">22</span>    <span class="bp">self</span><span class="o">.</span><span class="n">osfs</span><span class="o">=</span><span class="n">OSFileSystem</span><span class="p">(</span><span class="n">cache_dir</span><span class="p">)</span>
+<span class="linenos">23</span>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">osfs</span><span class="o">.</span><span class="n">is_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache_creds_file</span><span class="p">):</span>
+<span class="linenos">24</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">25</span>            <span class="n">spfs_creds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">osfs</span><span class="o">.</span><span class="n">read_file_content</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache_creds_file</span><span class="p">)[</span><span class="s1">&#39;Body&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1">#.decode(&#39;utf-8&#39;)</span>
+<span class="linenos">26</span>            <span class="bp">self</span><span class="o">.</span><span class="n">spfs_creds</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">spfs_creds</span><span class="p">)</span>
+<span class="linenos">27</span>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="linenos">28</span>            <span class="bp">self</span><span class="o">.</span><span class="n">spfs_creds</span><span class="o">=</span><span class="p">{}</span>
+<span class="linenos">29</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">30</span>        <span class="bp">self</span><span class="o">.</span><span class="n">spfs_creds</span><span class="o">=</span><span class="p">{}</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="linenos">33</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Get user credentials cache</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="sd">    Returns</span>
+<span class="linenos">36</span><span class="sd">    -------</span>
+<span class="linenos">37</span><span class="sd">    dict</span>
+<span class="linenos">38</span><span class="sd">        dict containing token, refresh_token and expiry timestamp</span>
+<span class="linenos">39</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">40</span>    <span class="k">try</span><span class="p">:</span>
+<span class="linenos">41</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">spfs_creds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">]</span>
+<span class="linenos">42</span>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="linenos">43</span>        <span class="k">return</span> <span class="p">{}</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span><span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">values</span><span class="p">:</span><span class="nb">dict</span><span class="p">)</span><span class="o">-&gt;</span><span class="kc">None</span><span class="p">:</span>
+<span class="linenos">46</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Updates credentials cache</span>
+<span class="linenos">47</span>
+<span class="linenos">48</span><span class="sd">    Parameters</span>
+<span class="linenos">49</span><span class="sd">    ----------</span>
+<span class="linenos">50</span><span class="sd">    values : dict</span>
+<span class="linenos">51</span><span class="sd">        dict containing updated cache details. Schema to be same as response of read() method.</span>
+<span class="linenos">52</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">53</span>    <span class="bp">self</span><span class="o">.</span><span class="n">spfs_creds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">]</span><span class="o">=</span><span class="n">values</span>
+<span class="linenos">54</span>    <span class="bp">self</span><span class="o">.</span><span class="n">osfs</span><span class="o">.</span><span class="n">write_file_content</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache_creds_file</span><span class="p">,</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spfs_creds</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)),</span><span class="n">chunk_write</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.async_sync_job_poll">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">async_sync_job_poll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3600</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.async_sync_job_poll" title="Permalink to this definition">#</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<em>str</em>) – URL of the location to fetch status for</p></li>
+<li><p><strong>timeout</strong> (<em>int</em><em>, </em><em>optional</em>) – Amount of time before Exception raise to poll status for, by default 3600</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Final status response object.</p>
+</dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – _description_</p>
 </dd>
 </dl>
 </dd></dl>
@@ -362,9 +433,13 @@ for login , by default True</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.authenticate">
 <span class="sig-name descname"><span class="pre">authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate" title="Permalink to this definition">#</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<dd><p>Authenticate http session</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>Callable</em><em>[</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Callback method to which login request (if any) to be sent to, by default None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -372,37 +447,61 @@ for login , by default True</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens">
 <span class="sig-name descname"><span class="pre">authenticate_and_get_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Manual method to authenticate and fetch access token, refresh token</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> (<em>list</em>) – list of graph access scopes</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – username</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – password</p></li>
+<li><p><strong>callback</strong> (<em>Callable</em><em>[</em><em>[</em><em>str</em><em>]</em><em>,</em><em>Any</em><em>]</em><em>, </em><em>optional</em>) – Callback method to which login request (if any) to be sent to, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>access_token, refresh_token and expiry timestamp of access_token</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache">
 <span class="sig-name descname"><span class="pre">clear_token_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Clears token cache</p>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.copyFile">
-<span class="sig-name descname"><span class="pre">copyFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.copyFile" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.copy_item">
+<span class="sig-name descname"><span class="pre">copy_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.copy_item" title="Permalink to this definition">#</a></dt>
 <dd><p>Copies file/folder from one path to another.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sourceRelFilePath</strong> (<em>str</em>) – Source file path from root of the site.</p></li>
 <li><p><strong>targetRelDirectoryPath</strong> (<em>str</em>) – Target file path from root of the site.</p></li>
-<li><p><strong>newFileName</strong> (<em>_type_</em><em>, </em><em>optional</em>) – Enter filename if you want to copy with a different name, by default None</p></li>
+<li><p><strong>newFileName</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Enter filename if you want to copy with a different name, by default None</p></li>
+<li><p><strong>wait_for_operation</strong> (<em>bool</em>) – True if you want to wait for the copy operation to complete (polling).</p></li>
+<li><p><strong>conflict_behaviour</strong> (<em>str</em>) – Conflict behaviour when the target already exists. Possible values are,
+fail, rename, replace, defaults to ‘fail’.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>True if operation succeeded else False</p>
+<dd class="field-even"><p>Response dict object based on polling input.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>bool</p>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.deleteFile">
-<span class="sig-name descname"><span class="pre">deleteFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.deleteFile" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.delete_item">
+<span class="sig-name descname"><span class="pre">delete_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.delete_item" title="Permalink to this definition">#</a></dt>
 <dd><p>Deletes file/folder from the filesystem</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -444,29 +543,87 @@ Path =&gt; Given input file path (input_file_path)</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid">
 <span class="sig-name descname"><span class="pre">get_site_and_root_driveid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Get’s site id and root drive id of the give sitepath using authenticated session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>Exception</strong> – Raises error if given sitepath or drive folder is incorrect or doesn’t exits.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.is_dir">
 <span class="sig-name descname"><span class="pre">is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_dir" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Checks if the given item is a folder/directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relPath</strong> (<em>str</em><em>, </em><em>optional</em>) – path from document root. Root folder is consider if no value is provided, by default None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>False if directory/folder item doesn’t exist else itemid</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.is_file">
 <span class="sig-name descname"><span class="pre">is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_file" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Checks if the given item is a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relPath</strong> (<em>str</em><em>, </em><em>optional</em>) – path from document root. Root folder is consider if no value is provided, by default None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>False if file item doesn’t exist else itemid</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.listdir">
 <span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relPath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.listdir" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>List contents of a folder item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relPath</strong> (<em>str</em><em>, </em><em>optional</em>) – path from document root. Root folder is consider if no value is provided, by default None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of items under given path</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – Raises exception if provided folder doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.moveFile">
-<span class="sig-name descname"><span class="pre">moveFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.moveFile" title="Permalink to this definition">#</a></dt>
-<dd><dl class="field-list simple">
+<dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.move_item">
+<span class="sig-name descname"><span class="pre">move_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.move_item" title="Permalink to this definition">#</a></dt>
+<dd><p>Move a file/folder from one path to another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourceRelFilePath</strong> (<em>str</em>) – Source file path from root of the site.</p></li>
+<li><p><strong>targetRelDirectoryPath</strong> (<em>str</em>) – Target file path from root of the site.</p></li>
+<li><p><strong>newFileName</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Enter filename if you want to copy with a different name, by default None</p></li>
+<li><p><strong>conflict_behaviour</strong> (<em>str</em>) – Conflict behaviour when the target already exists. Possible values are,
+fail, rename, replace, defaults to ‘fail’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Metadata of newly created object.</p>
+</dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -507,7 +664,25 @@ Path =&gt; Given input file path (input_file_path)</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache">
 <span class="sig-name descname"><span class="pre">update_fetch_from_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Method to update or fetch data to/from cache as per will. Use <cite>authenticate</cite> method which will take care
+of this automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> (<em>str</em>) – username</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – password</p></li>
+<li><p><strong>scope</strong> (<em>list</em>) – list of graph access scopes</p></li>
+<li><p><strong>callback</strong> (<em>Callable</em><em>[</em><em>[</em><em>str</em><em>]</em><em>,</em><em>Any</em><em>]</em><em>, </em><em>optional</em>) – Callback method to which login request (if any) to be sent to, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Access Token</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.username">
@@ -553,6 +728,7 @@ This parameter is meaningful when chunk_write=True, by default 4**10*10 (10MB)</
 </dl>
 </dd></dl>
 
+</section>
 </section>
 </dd></dl>
 
@@ -624,14 +800,14 @@ This parameter is meaningful when chunk_write=True, by default 4**10*10 (10MB)</
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.authenticate_and_get_tokens()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.clear_token_cache()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.copyFile"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.copyFile()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.deleteFile"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.deleteFile()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.copy_item"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.copy_item()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.delete_item"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.delete_item()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_file_head"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.get_file_head()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.get_site_and_root_driveid"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.get_site_and_root_driveid()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_dir"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_dir()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.is_file"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.is_file()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.listdir"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.listdir()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.moveFile"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.moveFile()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.move_item"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.move_item()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.read_file_content"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.read_file_content()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.sitePath"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.sitePath</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache"><code class="docutils literal notranslate"><span class="pre">SharePointFileSystem.update_fetch_from_cache()</span></code></a></li>
