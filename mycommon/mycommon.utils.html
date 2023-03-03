@@ -212,6 +212,45 @@
 <span id="mycommon-utils-module"></span><h1>mycommon.utils module<a class="headerlink" href="#module-mycommon.utils" title="Permalink to this heading">#</a></h1>
 <p>Common utilities for mycommon package</p>
 <dl class="py function">
+<dt class="sig sig-object py" id="mycommon.utils.Session">
+<span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">Session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.Session" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>A requests session configured with retries and proxies,</dt><dd><p>returns a session object back for further configuration.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ssl_verify</strong> (<em>bool</em><em>, </em><em>optional</em>) – by default True</p></li>
+<li><p><strong>proxies</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>optional</em>) – by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>requests.Session</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Usage:</dt><dd><dl class="simple">
+<dt>proxies = {</dt><dd><p>‘http’: ‘<a class="reference external" href="http:/">http:/</a>/&lt;your http proxy&gt;:&lt;port&gt;’,
+‘https’: ‘<a class="reference external" href="http:/">http:/</a>/&lt;your http proxy&gt;:&lt;port&gt;’,
+}</p>
+</dd>
+<dt>Supported kwargs:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Retry arguments:</dt><dd><p>&gt; status_forcelist: defaults to [500, 502, 503, 504]
+&gt; total: defaults to 3
+&gt; backoff_factory: defaults to 1</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="mycommon.utils.copy_file_object">
 <span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">copy_file_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_object_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.copy_file_object" title="Permalink to this definition">#</a></dt>
 <dd><p>Copies data from one source_fs to other taking full source data in memory.</p>
@@ -279,45 +318,6 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
 </dl>
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="mycommon.utils.session">
-<span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.session" title="Permalink to this definition">#</a></dt>
-<dd><dl class="simple">
-<dt>A requests session configured with retries and proxies,</dt><dd><p>returns a session object back for further configuration.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ssl_verify</strong> (<em>bool</em><em>, </em><em>optional</em>) – by default True</p></li>
-<li><p><strong>proxies</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>optional</em>) – by default None</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>requests.Session</p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Usage:</dt><dd><dl class="simple">
-<dt>proxies = {</dt><dd><p>‘http’: ‘<a class="reference external" href="http:/">http:/</a>/&lt;your http proxy&gt;:&lt;port&gt;’,
-‘https’: ‘<a class="reference external" href="http:/">http:/</a>/&lt;your http proxy&gt;:&lt;port&gt;’,
-}</p>
-</dd>
-<dt>Supported kwargs:</dt><dd><ol class="arabic simple">
-<li><dl class="simple">
-<dt>Retry arguments:</dt><dd><p>&gt; status_forcelist: defaults to [500, 502, 503, 504]
-&gt; total: defaults to 3
-&gt; backoff_factory: defaults to 1</p>
-</dd>
-</dl>
-</li>
-</ol>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 
         </article>
@@ -368,9 +368,9 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">mycommon.utils module</a><ul>
+<li><a class="reference internal" href="#mycommon.utils.Session"><code class="docutils literal notranslate"><span class="pre">Session()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.utils.copy_file_object"><code class="docutils literal notranslate"><span class="pre">copy_file_object()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.utils.copy_file_object_as_stream"><code class="docutils literal notranslate"><span class="pre">copy_file_object_as_stream()</span></code></a></li>
-<li><a class="reference internal" href="#mycommon.utils.session"><code class="docutils literal notranslate"><span class="pre">session()</span></code></a></li>
 </ul>
 </li>
 </ul>
