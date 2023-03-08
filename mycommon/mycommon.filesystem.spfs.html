@@ -477,12 +477,12 @@ for login , by default True</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.copy_item">
-<span class="sig-name descname"><span class="pre">copy_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.copy_item" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">copy_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourcePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.copy_item" title="Permalink to this definition">#</a></dt>
 <dd><p>Copies file/folder from one path to another.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sourceRelFilePath</strong> (<em>str</em>) – Source file path from root of the site.</p></li>
+<li><p><strong>sourcePath</strong> (<em>str</em>) – Source item path from root of the site. Can be file/folder.</p></li>
 <li><p><strong>targetRelDirectoryPath</strong> (<em>str</em>) – Target file path from root of the site.</p></li>
 <li><p><strong>newFileName</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Enter filename if you want to copy with a different name, by default None</p></li>
 <li><p><strong>wait_for_operation</strong> (<em>bool</em>) – True if you want to wait for the copy operation to complete (polling).</p></li>
@@ -610,12 +610,12 @@ Path =&gt; Given input file path (input_file_path)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.spfs.SharePointFileSystem.move_item">
-<span class="sig-name descname"><span class="pre">move_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRelFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.move_item" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">move_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourcePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetRelDirectoryPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newFileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_behaviour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fail'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.spfs.SharePointFileSystem.move_item" title="Permalink to this definition">#</a></dt>
 <dd><p>Move a file/folder from one path to another.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sourceRelFilePath</strong> (<em>str</em>) – Source file path from root of the site.</p></li>
+<li><p><strong>sourcePath</strong> (<em>str</em>) – Source item path from root of the site. Can be file/folder.</p></li>
 <li><p><strong>targetRelDirectoryPath</strong> (<em>str</em>) – Target file path from root of the site.</p></li>
 <li><p><strong>newFileName</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Enter filename if you want to copy with a different name, by default None</p></li>
 <li><p><strong>conflict_behaviour</strong> (<em>str</em>) – Conflict behaviour when the target already exists. Possible values are,

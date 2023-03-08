@@ -213,9 +213,9 @@
 <p>This module tries to expose S3 as a normal filesystem.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mycommon.filesystem.s3fs.ProgressPercentage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.s3fs.</span></span><span class="sig-name descname"><span class="pre">ProgressPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.ProgressPercentage" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.filesystem.s3fs.</span></span><span class="sig-name descname"><span class="pre">ProgressPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.ProgressPercentage" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class object to get progress based to given file size and regular __call__ method</p>
+<p>Class object to update tqdm progress status</p>
 </dd></dl>
 
 <dl class="py class">
@@ -371,7 +371,11 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <dl class="simple">
 <dt>Example</dt><dd><ol class="arabic simple">
 <li><p>Range=”bytes 0-1023/1024”  to get data from 0 to 1024 bytes</p></li>
-<li><p>kwargs -&gt; boto3 s3 client object parameters. Reference: <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Client.get_object">https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Client.get_object</a></p></li>
+<li><dl class="simple">
+<dt>kwargs -&gt; boto3 s3 client object parameters.</dt><dd><p>Reference: <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Client.get_object">https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Client.get_object</a></p>
+</dd>
+</dl>
+</li>
 </ol>
 </dd>
 </dl>
