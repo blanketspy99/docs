@@ -101,3 +101,4 @@ for fut in result:
 1. Function to rename/move file or folder internally. **(completed in spfs)**
 1. Function to copy file/folder **(completed in spfs)**
 1. **`Optional`** Utils copy operation can be optimised if the source and target system are same, then use internal copy functions for faster processing.
+1. spfs authenticate part can be moved to utils as msal app authentication
