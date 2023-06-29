@@ -242,9 +242,10 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">boto3</span>
-<span class="linenos">2</span><span class="n">session</span><span class="o">=</span><span class="n">boto3</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="c1">#https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session</span>
-<span class="linenos">3</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">,</span><span class="n">boto3_session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>  <span class="c1"># init with boto3 session which</span>
-<span class="linenos">4</span><span class="c1"># can contain session based credentials or profiles.</span>
+<span class="linenos">2</span><span class="c1"># if you want to customise the session including credentials.</span>
+<span class="linenos">3</span><span class="n">session</span><span class="o">=</span><span class="n">boto3</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="c1">#https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session</span>
+<span class="linenos">4</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">,</span><span class="n">boto3_session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>  <span class="c1"># init with boto3 session which</span>
+<span class="linenos">5</span><span class="c1"># can contain session based credentials or profiles.</span>
 </pre></div>
 </div>
 <dl class="py method">
