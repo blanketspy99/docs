@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Common Utilities Package" href="README.html" /><link rel="prev" title="mycommon.filesystem.spfs module" href="mycommon.filesystem.spfs.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="mycommon.filesystem.spfs module" href="mycommon.filesystem.spfs.html" />
         <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.utils.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
@@ -157,6 +157,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">About</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">mycommon</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="mycommon.html">mycommon package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="mycommon.build.html">mycommon.build package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -174,7 +175,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
 </ul>
 
 </div>
@@ -253,7 +253,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mycommon.utils.copy_file_object">
-<span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">copy_file_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_object_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.copy_file_object" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">copy_file_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_object_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs_extra_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_extra_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.copy_file_object" title="Permalink to this definition">#</a></dt>
 <dd><p>Copies data from one source_fs to other taking full source data in memory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -269,6 +269,8 @@
 <li><p><strong>show_progress</strong> (<em>bool</em><em>, </em><em>optional</em>) – , by default True</p></li>
 <li><p><strong>chunk_write</strong> (<em>bool</em><em>, </em><em>optional</em>) – True when you want to write data in chunks, best in case of uploads, by default True</p></li>
 <li><p><strong>write_byte_size</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Leave to default which can handle by type for Filesystem, by default ‘default’</p></li>
+<li><p><strong>source_fs_extra_args</strong> (<em>dict</em><em>, </em><em>optional</em>) – Source file system related extra args</p></li>
+<li><p><strong>target_fs_extra_args</strong> (<em>dict</em><em>, </em><em>optional</em>) – Target file system related extra args</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -285,7 +287,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mycommon.utils.copy_file_object_as_stream">
-<span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">copy_file_object_as_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_object_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10485760</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.copy_file_object_as_stream" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">copy_file_object_as_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_object_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10485760</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_byte_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_fs_extra_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_fs_extra_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.copy_file_object_as_stream" title="Permalink to this definition">#</a></dt>
 <dd><p>Copies data from one source_fs to other as streaming data. This method is primarly useful when the
 object size is large and to conserve system memory.</p>
 <dl class="field-list simple">
@@ -305,6 +307,8 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
 , by default 4**10*5</p></li>
 <li><p><strong>show_progress</strong> (<em>bool</em><em>, </em><em>optional</em>) – , by default True</p></li>
 <li><p><strong>write_byte_size</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Leave to default which can handle by type for Filesystem, by default ‘default’</p></li>
+<li><p><strong>source_fs_extra_args</strong> (<em>dict</em><em>, </em><em>optional</em>) – Source file system related extra args</p></li>
+<li><p><strong>target_fs_extra_args</strong> (<em>dict</em><em>, </em><em>optional</em>) – Target file system related extra args</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -326,15 +330,7 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="README.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Common Utilities Package</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
+          
           <a class="prev-page" href="mycommon.filesystem.spfs.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">

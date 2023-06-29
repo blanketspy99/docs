@@ -157,6 +157,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">About</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">mycommon</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="mycommon.html">mycommon package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="mycommon.build.html">mycommon.build package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -174,7 +175,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
 </ul>
 
 </div>
@@ -221,10 +221,20 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>FileSystem</strong> (<em>FileSystem</em>) – </p></li>
 <li><p><strong>Note</strong> – It is ideal to follow Unix convention irrespective of operating system.</p></li>
-<li><p><strong>Example</strong> – myfs=OSFileSystem()  # initialize with ‘/’ as base directory, can be used with Windows.
-myfs=OSFileSystem(‘/Users’)  # set path to /Users ~= C://Users</p></li>
-<li><p><strong>methods</strong> (<em>Few available</em>) – get_abs_path  =&gt; Return absolute path string and in base os format if required.</p></li>
 </ul>
+</dd>
+</dl>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">myfs</span><span class="o">=</span><span class="n">OSFileSystem</span><span class="p">()</span>  <span class="c1"># initialize with &#39;/&#39; as base directory, can be used with Windows.</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">myfs</span><span class="o">=</span><span class="n">OSFileSystem</span><span class="p">(</span><span class="s1">&#39;/Users&#39;</span><span class="p">)</span>  <span class="c1"># set path to /Users ~= C://Users</span>
+<span class="linenos">2</span><span class="n">myfs</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>  <span class="c1"># lists the files under /Users directory.</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Few available methods:</dt><dd><p>get_abs_path  =&gt; Return absolute path string and in base os format if required.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -385,7 +395,7 @@ Path =&gt; Given input file path (input_file_path)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.osfs.OSFileSystem.read_file_content">
-<span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">read_file_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.osfs.OSFileSystem.read_file_content" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Method call to get object data in binary format along with few metadata,</dt><dd><p>returned by get_file_head method.</p>
 </dd>
@@ -441,6 +451,7 @@ This parameter is meaningful when chunk_write=True, by default 4**10*4</p></li>
 </dl>
 </dd></dl>
 
+</section>
 </dd></dl>
 
 </section>

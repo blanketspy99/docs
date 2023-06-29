@@ -157,6 +157,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">About</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">mycommon</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="mycommon.html">mycommon package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="mycommon.build.html">mycommon.build package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -174,7 +175,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
 </ul>
 
 </div>
@@ -230,23 +230,25 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <dd class="field-odd"><p><strong>FileSystem</strong> (<em>FileSystem</em>) – </p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>Exception</strong> – </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – </p></li>
+<li><p><strong>Usage</strong> – </p></li>
+<li><p><strong>-----</strong> – </p></li>
+<li><p><strong>.. code-block:</strong> – python: :linenos:
+    
+    s3fs=S3FileSystem(‘mybucket’)  # initialize with default prefix ‘’ as base root.</p></li>
+<li><p><strong>.. code-block:</strong> – python: :linenos:
+    
+    s3fs=S3FileSystem(‘mybucket’,prefix=’myfolder/’)  # equivalent to myfolder/ in UNIX</p></li>
+<li><p><strong>.. code-block:</strong> – python: :linenos:
+    
+    import boto3
+    session=boto3.session.Session() #https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session
+    s3fs=S3FileSystem(‘mybucket’,boto3_session=session)  # init with boto3 session which
+    # can contain session based credentials or profiles.</p></li>
+</ul>
 </dd>
 </dl>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">)</span>  <span class="c1"># initialize with default prefix &#39;&#39; as base root.</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;myfolder/&#39;</span><span class="p">)</span>  <span class="c1"># equivalent to myfolder/ in UNIX</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">boto3</span>
-<span class="linenos">2</span><span class="n">session</span><span class="o">=</span><span class="n">boto3</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="c1">#https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session</span>
-<span class="linenos">3</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">,</span><span class="n">boto3_session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>  <span class="c1"># init with boto3 session which</span>
-<span class="linenos">4</span><span class="c1"># can contain session based credentials or profiles.</span>
-</pre></div>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.copy_item">
 <span class="sig-name descname"><span class="pre">copy_item</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.copy_item" title="Permalink to this definition">#</a></dt>
@@ -260,7 +262,11 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.get_abs_path">
 <span class="sig-name descname"><span class="pre">get_abs_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.get_abs_path" title="Permalink to this definition">#</a></dt>
-<dd><p>Get absolute path of given path</p>
+<dd><dl class="simple">
+<dt>” Returns input prefix. If prefix is not provided, returns default prefix provided at init.</dt><dd><p>This doesn’t override or join existing prefix to input prefix similar to other filesystems
+as S3 doesn’t follow conventional filesystem pattern.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – s3 prefix to use, by default None</p>
@@ -327,7 +333,7 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.listdir">
-<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.listdir" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.listdir" title="Permalink to this definition">#</a></dt>
 <dd><p>List contents of a given prefix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -412,6 +418,23 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 This parameter is meaningful when chunk_write=True, by default 4**10*10</p></li>
 <li><p><strong>content_range</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – requires bytes content range objects. Ex: “bytes 0-499/500”, by default None</p></li>
 <li><p><strong>chunk_write_threshold</strong> (<em>int</em><em>, </em><em>optional</em>) – Max amount of bytes that needs to be written into filesystem in each chunk, by default 4**10*25</p></li>
+<li><p><strong>**kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – <p>Extra arguments such as Parts, ContentLength or UploadId
+You can also pass S3 Extra Args to set ContentType, Encryption or ACL or many,
+for more details, refer</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/create_multipart_upload.html">https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/create_multipart_upload.html</a></dt><dd><p>for multipart or chunk write uploads</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/customizations/s3.html#boto3.s3.transfer.S3Transfer.ALLOWED_UPLOAD_ARGS">https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/customizations/s3.html#boto3.s3.transfer.S3Transfer.ALLOWED_UPLOAD_ARGS</a></dt><dd><p>when chunk_write=False</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>irrespectively both of them has common args mostly.</p>
+</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -423,7 +446,6 @@ This parameter is meaningful when chunk_write=True, by default 4**10*10</p></li>
 </dl>
 </dd></dl>
 
-</section>
 </dd></dl>
 
 </section>
