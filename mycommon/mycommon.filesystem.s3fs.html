@@ -230,25 +230,23 @@ Note: It is ideal to follow Unix convention irrespective of operating system.</p
 <dd class="field-odd"><p><strong>FileSystem</strong> (<em>FileSystem</em>) – </p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>Exception</strong> – </p></li>
-<li><p><strong>Usage</strong> – </p></li>
-<li><p><strong>-----</strong> – </p></li>
-<li><p><strong>.. code-block:</strong> – python: :linenos:
-    
-    s3fs=S3FileSystem(‘mybucket’)  # initialize with default prefix ‘’ as base root.</p></li>
-<li><p><strong>.. code-block:</strong> – python: :linenos:
-    
-    s3fs=S3FileSystem(‘mybucket’,prefix=’myfolder/’)  # equivalent to myfolder/ in UNIX</p></li>
-<li><p><strong>.. code-block:</strong> – python: :linenos:
-    
-    import boto3
-    session=boto3.session.Session() #https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session
-    s3fs=S3FileSystem(‘mybucket’,boto3_session=session)  # init with boto3 session which
-    # can contain session based credentials or profiles.</p></li>
-</ul>
+<dd class="field-even"><p><strong>Exception</strong> – </p>
 </dd>
 </dl>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">)</span>  <span class="c1"># initialize with default prefix &#39;&#39; as base root.</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;myfolder/&#39;</span><span class="p">)</span>  <span class="c1"># equivalent to myfolder/ in UNIX</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="linenos">2</span><span class="n">session</span><span class="o">=</span><span class="n">boto3</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="c1">#https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session</span>
+<span class="linenos">3</span><span class="n">s3fs</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;mybucket&#39;</span><span class="p">,</span><span class="n">boto3_session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>  <span class="c1"># init with boto3 session which</span>
+<span class="linenos">4</span><span class="c1"># can contain session based credentials or profiles.</span>
+</pre></div>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="mycommon.filesystem.s3fs.S3FileSystem.copy_item">
 <span class="sig-name descname"><span class="pre">copy_item</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.filesystem.s3fs.S3FileSystem.copy_item" title="Permalink to this definition">#</a></dt>
@@ -446,6 +444,7 @@ for more details, refer</p>
 </dl>
 </dd></dl>
 
+</section>
 </dd></dl>
 
 </section>

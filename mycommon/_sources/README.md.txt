@@ -13,6 +13,8 @@ cd docs
 sphinx-apidoc -P -e -f -o source/ ../src/mycommon/
 sphinx-apidoc -e -f -o source/ ../src/mycommon/
 make html
+or
+sphinx-build -b html source/ build/html/docs/mycommon
 
 ### optional
 cd docs
@@ -24,12 +26,25 @@ git submodule update --remote --merge
 
 ```python
 import os
-from mycommon.filesystem import OSFileSystem, S3FileSystem
+#import local OS Filesystem ,S3 and Sharepoint
+from mycommon.filesystem import OSFileSystem, S3FileSystem, SharePointFileSystem
 fs1=OSFileSystem(os.getcwd())
 fs1.chdir('..')
 fs2=S3FileSystem('sp-s3bucket-cs')
+fs3=SharePointFileSystem(client_id="accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx",
+            tenant_id="xxxxxe87-7xxx3-4xxx-xxxxc-xxxxxxxxxx",
+            hostname="mycompany.sharepoint.com",
+            username="user@mycompany.com",
+            password="",
+            Documents="Shared Documents",
+            sitePath='/sites/Test')
 # fs2=OSFileSystem(os.getcwd())
 ```
+Every filesystem has common object handling method. All it differs on initialisation, such as for S3, you need the bucket name for basic init and for sharepoint, it requires details such as sharepoint hostname, sitepath and azure app registration client and tenant ids.
+Reference:
+1. S3: https://blanketspy99.avanverse.com/docs/mycommon/mycommon.filesystem.s3fs.html#module-mycommon.filesystem.s3fs
+1. SharePoint: https://blanketspy99.avanverse.com/docs/mycommon/mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.SharePointFileSystem
+
 ```python
 from mycommon import utils
 #copy as stream,  read both source and target in chunks

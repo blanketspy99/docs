@@ -222,6 +222,8 @@
 <span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">P</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">o</span> <span class="n">source</span><span class="o">/</span> <span class="o">../</span><span class="n">src</span><span class="o">/</span><span class="n">mycommon</span><span class="o">/</span>
 <span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">o</span> <span class="n">source</span><span class="o">/</span> <span class="o">../</span><span class="n">src</span><span class="o">/</span><span class="n">mycommon</span><span class="o">/</span>
 <span class="n">make</span> <span class="n">html</span>
+<span class="ow">or</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="n">source</span><span class="o">/</span> <span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">mycommon</span>
 
 <span class="c1">### optional</span>
 <span class="n">cd</span> <span class="n">docs</span>
@@ -231,13 +233,27 @@
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">mycommon.filesystem</span> <span class="kn">import</span> <span class="n">OSFileSystem</span><span class="p">,</span> <span class="n">S3FileSystem</span>
+<span class="c1">#import local OS Filesystem ,S3 and Sharepoint</span>
+<span class="kn">from</span> <span class="nn">mycommon.filesystem</span> <span class="kn">import</span> <span class="n">OSFileSystem</span><span class="p">,</span> <span class="n">S3FileSystem</span><span class="p">,</span> <span class="n">SharePointFileSystem</span>
 <span class="n">fs1</span><span class="o">=</span><span class="n">OSFileSystem</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
 <span class="n">fs1</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
 <span class="n">fs2</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;sp-s3bucket-cs&#39;</span><span class="p">)</span>
+<span class="n">fs3</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx&quot;</span><span class="p">,</span>
+            <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;xxxxxe87-7xxx3-4xxx-xxxxc-xxxxxxxxxx&quot;</span><span class="p">,</span>
+            <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;mycompany.sharepoint.com&quot;</span><span class="p">,</span>
+            <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user@mycompany.com&quot;</span><span class="p">,</span>
+            <span class="n">password</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">Documents</span><span class="o">=</span><span class="s2">&quot;Shared Documents&quot;</span><span class="p">,</span>
+            <span class="n">sitePath</span><span class="o">=</span><span class="s1">&#39;/sites/Test&#39;</span><span class="p">)</span>
 <span class="c1"># fs2=OSFileSystem(os.getcwd())</span>
 </pre></div>
 </div>
+<p>Every filesystem has common object handling method. All it differs on initialisation, such as for S3, you need the bucket name for basic init and for sharepoint, it requires details such as sharepoint hostname, sitepath and azure app registration client and tenant ids.
+Reference:</p>
+<ol class="simple">
+<li><p>S3: https://blanketspy99.avanverse.com/docs/mycommon/mycommon.filesystem.s3fs.html#module-mycommon.filesystem.s3fs</p></li>
+<li><p>SharePoint: https://blanketspy99.avanverse.com/docs/mycommon/mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.SharePointFileSystem</p></li>
+</ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mycommon</span> <span class="kn">import</span> <span class="n">utils</span>
 <span class="c1">#copy as stream,  read both source and target in chunks</span>
 <span class="n">utils</span><span class="o">.</span><span class="n">copy_file_object_as_stream</span><span class="p">(</span><span class="s1">&#39;PAV.zip&#39;</span><span class="p">,</span><span class="n">fs2</span><span class="p">,</span><span class="n">fs1</span><span class="p">,</span><span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
