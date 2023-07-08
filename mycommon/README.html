@@ -170,6 +170,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.spfs.html">mycommon.filesystem.spfs module</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="mycommon.msauth.html">mycommon.msauth module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mycommon.utils.html">mycommon.utils module</a></li>
 </ul>
 </li>
@@ -238,14 +239,14 @@
 <span class="n">fs1</span><span class="o">=</span><span class="n">OSFileSystem</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
 <span class="n">fs1</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
 <span class="n">fs2</span><span class="o">=</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="s1">&#39;sp-s3bucket-cs&#39;</span><span class="p">)</span>
-<span class="n">fs3</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx&quot;</span><span class="p">,</span>
-            <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;xxxxxe87-7xxx3-4xxx-xxxxc-xxxxxxxxxx&quot;</span><span class="p">,</span>
-            <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;mycompany.sharepoint.com&quot;</span><span class="p">,</span>
-            <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user@mycompany.com&quot;</span><span class="p">,</span>
-            <span class="n">password</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="n">Documents</span><span class="o">=</span><span class="s2">&quot;Shared Documents&quot;</span><span class="p">,</span>
-            <span class="n">sitePath</span><span class="o">=</span><span class="s1">&#39;/sites/Test&#39;</span><span class="p">)</span>
-<span class="c1"># fs2=OSFileSystem(os.getcwd())</span>
+<span class="n">auth</span><span class="o">=</span><span class="n">PublicClientAuthentication</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx&quot;</span><span class="p">,</span>
+                                        <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="n">xxxxxe87</span><span class="o">-</span><span class="mi">7</span><span class="n">xxx3</span><span class="o">-</span><span class="mi">4</span><span class="n">xxx</span><span class="o">-</span><span class="n">xxxxc</span><span class="o">-</span><span class="n">xxxxxxxxxx</span><span class="s2">&quot;,</span>
+                                        <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user@mycompany.com&quot;</span><span class="p">,</span>
+                                        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;mysecretpassword&quot;</span><span class="p">)</span>
+<span class="n">fs3</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span>
+                    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;headcliff.sharepoint.com&quot;</span><span class="p">,</span>
+                    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;shaik.shahrukh@headcliff.com&quot;</span><span class="p">,</span>
+                    <span class="n">sitePath</span><span class="o">=</span><span class="s1">&#39;/sites/Test&#39;</span><span class="p">,</span><span class="n">with_auth</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Every filesystem has common object handling method. All it differs on initialisation, such as for S3, you need the bucket name for basic init and for sharepoint, it requires details such as sharepoint hostname, sitepath and azure app registration client and tenant ids.

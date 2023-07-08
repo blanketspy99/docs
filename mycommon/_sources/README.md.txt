@@ -31,14 +31,14 @@ from mycommon.filesystem import OSFileSystem, S3FileSystem, SharePointFileSystem
 fs1=OSFileSystem(os.getcwd())
 fs1.chdir('..')
 fs2=S3FileSystem('sp-s3bucket-cs')
-fs3=SharePointFileSystem(client_id="accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx",
-            tenant_id="xxxxxe87-7xxx3-4xxx-xxxxc-xxxxxxxxxx",
-            hostname="mycompany.sharepoint.com",
-            username="user@mycompany.com",
-            password="",
-            Documents="Shared Documents",
-            sitePath='/sites/Test')
-# fs2=OSFileSystem(os.getcwd())
+auth=PublicClientAuthentication(client_id="accxxxx-1dxx-4bxx-xxxx-xxxxxxxxx",
+                                        tenant_id=""xxxxxe87-7xxx3-4xxx-xxxxc-xxxxxxxxxx",
+                                        username="user@mycompany.com",
+                                        password="mysecretpassword")
+fs3=SharePointFileSystem(
+                    hostname="headcliff.sharepoint.com",
+                    username="shaik.shahrukh@headcliff.com",
+                    sitePath='/sites/Test',with_auth=True,auth=auth)
 ```
 Every filesystem has common object handling method. All it differs on initialisation, such as for S3, you need the bucket name for basic init and for sharepoint, it requires details such as sharepoint hostname, sitepath and azure app registration client and tenant ids.
 Reference:

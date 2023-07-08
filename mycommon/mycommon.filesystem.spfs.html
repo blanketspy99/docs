@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.utils module" href="mycommon.utils.html" /><link rel="prev" title="mycommon.filesystem.s3fs module" href="mycommon.filesystem.s3fs.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="mycommon.msauth module" href="mycommon.msauth.html" /><link rel="prev" title="mycommon.filesystem.s3fs module" href="mycommon.filesystem.s3fs.html" />
         <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.filesystem.spfs.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
@@ -170,6 +170,7 @@
 <li class="toctree-l4 current current-page"><a class="current reference internal" href="#">mycommon.filesystem.spfs module</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="mycommon.msauth.html">mycommon.msauth module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mycommon.utils.html">mycommon.utils module</a></li>
 </ul>
 </li>
@@ -245,15 +246,15 @@ for login , by default True</p></li>
 <span class="linenos"> 5</span>                                <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user@mycompany.com&quot;</span><span class="p">,</span>
 <span class="linenos"> 6</span>                                <span class="n">password</span><span class="o">=</span><span class="s2">&quot;mysecretpassword&quot;</span><span class="p">)</span>
 <span class="linenos"> 7</span><span class="n">spfs2</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span>
-<span class="linenos"> 8</span>                  <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;headcliff.sharepoint.com&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>                  <span class="n">username</span><span class="o">=</span><span class="s2">&quot;shaik.shahrukh@headcliff.com&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>                  <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;mycompany.sharepoint.com&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>                  <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user@mycompany.com&quot;</span><span class="p">,</span>
 <span class="linenos">10</span>                  <span class="n">sitePath</span><span class="o">=</span><span class="s1">&#39;/sites/Test&#39;</span><span class="p">,</span><span class="n">with_auth</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">)</span>
 <span class="linenos">11</span>
 <span class="linenos">12</span><span class="c1"># or</span>
 <span class="linenos">13</span>
 <span class="linenos">14</span><span class="n">spfs2</span><span class="o">=</span><span class="n">SharePointFileSystem</span><span class="p">(</span>
-<span class="linenos">15</span>                  <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;headcliff.sharepoint.com&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>                  <span class="n">username</span><span class="o">=</span><span class="s2">&quot;shaik.shahrukh@headcliff.com&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>                  <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;mycompany.sharepoint.com&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>                  <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user@mycompany.com&quot;</span><span class="p">,</span>
 <span class="linenos">17</span>                  <span class="n">sitePath</span><span class="o">=</span><span class="s1">&#39;/sites/Test&#39;</span><span class="p">,</span><span class="n">with_auth</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="linenos">18</span><span class="n">spfs2</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span> <span class="c1">#calls authenicate function, optionally you can pass a</span>
 <span class="linenos">19</span><span class="c1">#callback function which a default parameter which contains step to login.</span>
@@ -615,12 +616,12 @@ This parameter is meaningful when chunk_write=True, by default 4**10*10 (10MB)</
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="mycommon.utils.html">
+          <a class="next-page" href="mycommon.msauth.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">mycommon.utils module</div>
+                <div class="title">mycommon.msauth module</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
