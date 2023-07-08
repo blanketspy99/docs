@@ -16,6 +16,7 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mycommon.msauth
    mycommon.utils
 
 Module contents

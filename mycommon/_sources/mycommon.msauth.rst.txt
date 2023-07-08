@@ -1,0 +1,7 @@
+mycommon.msauth module
+======================
+
+.. automodule:: mycommon.msauth
+   :members:
+   :undoc-members:
+   :show-inheritance:

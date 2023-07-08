@@ -168,6 +168,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.spfs.html">mycommon.filesystem.spfs module</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="mycommon.msauth.html">mycommon.msauth module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mycommon.utils.html">mycommon.utils module</a></li>
 </ul>
 </li>
@@ -221,7 +222,7 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.SharePointFileSystem.authenticate">authenticate() (mycommon.filesystem.spfs.SharePointFileSystem method)</a>
 </li>
-        <li><a href="mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.SharePointFileSystem.authenticate_and_get_tokens">authenticate_and_get_tokens() (mycommon.filesystem.spfs.SharePointFileSystem method)</a>
+        <li><a href="mycommon.msauth.html#mycommon.msauth.PublicClientAuthentication.authenticate_and_get_tokens">authenticate_and_get_tokens() (mycommon.msauth.PublicClientAuthentication method)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -243,7 +244,7 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="mycommon.filesystem.osfs.html#mycommon.filesystem.osfs.OSFileSystem.chdir">chdir() (mycommon.filesystem.osfs.OSFileSystem method)</a>
 </li>
-        <li><a href="mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.SharePointFileSystem.clear_token_cache">clear_token_cache() (mycommon.filesystem.spfs.SharePointFileSystem method)</a>
+        <li><a href="mycommon.msauth.html#mycommon.msauth.PublicClientAuthentication.clear_token_cache">clear_token_cache() (mycommon.msauth.PublicClientAuthentication method)</a>
 </li>
         <li><a href="mycommon.utils.html#mycommon.utils.copy_file_object">copy_file_object() (in module mycommon.utils)</a>
 </li>
@@ -348,10 +349,6 @@
 </li>
         </ul></li>
     </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.LocalSharePointCredsCache">LocalSharePointCredsCache (class in mycommon.filesystem.spfs)</a>
-</li>
-    </ul></td>
   </tr></table>
 </section>
 
@@ -378,6 +375,8 @@
           <li><a href="mycommon.filesystem.s3fs.html#module-mycommon.filesystem.s3fs">mycommon.filesystem.s3fs</a>
 </li>
           <li><a href="mycommon.filesystem.spfs.html#module-mycommon.filesystem.spfs">mycommon.filesystem.spfs</a>
+</li>
+          <li><a href="mycommon.msauth.html#module-mycommon.msauth">mycommon.msauth</a>
 </li>
           <li><a href="mycommon.utils.html#module-mycommon.utils">mycommon.utils</a>
 </li>
@@ -442,6 +441,13 @@
 </li>
         </ul></li>
         <li>
+    mycommon.msauth
+
+        <ul>
+          <li><a href="mycommon.msauth.html#module-mycommon.msauth">module</a>
+</li>
+        </ul></li>
+        <li>
     mycommon.utils
 
         <ul>
@@ -470,13 +476,15 @@
 </li>
         <li><a href="mycommon.build.jenkins.html#mycommon.build.jenkins.ParseDict">ParseDict (class in mycommon.build.jenkins)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="mycommon.filesystem.osfs.html#mycommon.filesystem.osfs.OSFileSystem.path">path (mycommon.filesystem.osfs.OSFileSystem property)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="mycommon.filesystem.s3fs.html#mycommon.filesystem.s3fs.S3FileSystem.prefix">prefix (mycommon.filesystem.s3fs.S3FileSystem property)</a>
 </li>
         <li><a href="mycommon.filesystem.s3fs.html#mycommon.filesystem.s3fs.ProgressPercentage">ProgressPercentage (class in mycommon.filesystem.s3fs)</a>
+</li>
+        <li><a href="mycommon.msauth.html#mycommon.msauth.PublicClientAuthentication">PublicClientAuthentication (class in mycommon.msauth)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -486,8 +494,6 @@
   <h2>R</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.LocalSharePointCredsCache.read">read() (mycommon.filesystem.spfs.LocalSharePointCredsCache method)</a>
-</li>
         <li><a href="mycommon.filesystem.osfs.html#mycommon.filesystem.osfs.OSFileSystem.read_file_content">read_file_content() (mycommon.filesystem.osfs.OSFileSystem method)</a>
 
         <ul>
@@ -524,7 +530,7 @@
   <h2>U</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.SharePointFileSystem.update_fetch_from_cache">update_fetch_from_cache() (mycommon.filesystem.spfs.SharePointFileSystem method)</a>
+        <li><a href="mycommon.msauth.html#mycommon.msauth.PublicClientAuthentication.update_fetch_from_cache">update_fetch_from_cache() (mycommon.msauth.PublicClientAuthentication method)</a>
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
@@ -538,8 +544,6 @@
   <h2>W</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="mycommon.filesystem.spfs.html#mycommon.filesystem.spfs.LocalSharePointCredsCache.write">write() (mycommon.filesystem.spfs.LocalSharePointCredsCache method)</a>
-</li>
         <li><a href="mycommon.filesystem.osfs.html#mycommon.filesystem.osfs.OSFileSystem.write_file_content">write_file_content() (mycommon.filesystem.osfs.OSFileSystem method)</a>
 
         <ul>
