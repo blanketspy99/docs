@@ -84,7 +84,7 @@ for item in dir_u:
 import concurrent
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
     for item in dir_u:
-        if osfs.is_file(i):
+        if osfs.is_file(item):
             executor.submit(copy_file_object_as_stream,item,osfs,s3fs,"new2/"+item)
         if osfs.is_dir(item):
             s3fs.mkdir("new/"+item,exist_ok=True) #create directory in target system if full path not exists
@@ -98,7 +98,7 @@ import concurrent
 result=[]
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
     for item in dir_u:
-        if osfs.is_file(i):
+        if osfs.is_file(item):
             result.append(executor.submit(copy_file_object_as_stream,item,osfs,s3fs,"new2/"+item))
         if osfs.is_dir(item):
             s3fs.mkdir("new/"+item,exist_ok=True) #create directory in target system if full path not exists
