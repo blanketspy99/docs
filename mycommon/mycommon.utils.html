@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="mycommon.filesystem.spfs module" href="mycommon.filesystem.spfs.html" />
+<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="mycommon.msauth module" href="mycommon.msauth.html" />
         <link rel="canonical" href="https://blanketspy99.github.io/docs/mycommon/mycommon.utils.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>mycommon.utils module - mycommon 1.0 documentation</title>
+        <title>mycommon.utils module - mycommon 1.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">mycommon 1.0 documentation</div></a>
+      <a href="index.html"><div class="brand">mycommon 1.5 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -147,7 +147,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">mycommon 1.0 documentation</span>
+  <span class="sidebar-brand-text">mycommon 1.5 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -157,7 +157,8 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="README.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html#common-utilities-package">Common Utilities Package</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">mycommon</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="mycommon.html">mycommon package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="mycommon.build.html">mycommon.build package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -170,6 +171,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mycommon.filesystem.spfs.html">mycommon.filesystem.spfs module</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="mycommon.msauth.html">mycommon.msauth module</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">mycommon.utils module</a></li>
 </ul>
 </li>
@@ -212,10 +214,11 @@
           <section id="module-mycommon.utils">
 <span id="mycommon-utils-module"></span><h1>mycommon.utils module<a class="headerlink" href="#module-mycommon.utils" title="Permalink to this heading">#</a></h1>
 <p>Common utilities for mycommon package</p>
-<dl class="py function">
+<dl class="py class">
 <dt class="sig sig-object py" id="mycommon.utils.Session">
-<span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">Session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.Session" title="Permalink to this definition">#</a></dt>
-<dd><dl class="simple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mycommon.utils.</span></span><span class="sig-name descname"><span class="pre">Session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssl_verify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.Session" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
 <dt>A requests session configured with retries and proxies,</dt><dd><p>returns a session object back for further configuration.</p>
 </dd>
 </dl>
@@ -249,6 +252,11 @@
 </dl>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mycommon.utils.Session.setup_retry_adapter">
+<span class="sig-name descname"><span class="pre">setup_retry_adapter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mycommon.utils.Session.setup_retry_adapter" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py function">
@@ -331,14 +339,14 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
         
         <div class="related-pages">
           
-          <a class="prev-page" href="mycommon.filesystem.spfs.html">
+          <a class="prev-page" href="mycommon.msauth.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">mycommon.filesystem.spfs module</div>
+                <div class="title">mycommon.msauth module</div>
                 
               </div>
             </a>
@@ -373,7 +381,10 @@ Note: Feel free to increase the byte_size that needs to read as per the source_f
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">mycommon.utils module</a><ul>
-<li><a class="reference internal" href="#mycommon.utils.Session"><code class="docutils literal notranslate"><span class="pre">Session()</span></code></a></li>
+<li><a class="reference internal" href="#mycommon.utils.Session"><code class="docutils literal notranslate"><span class="pre">Session</span></code></a><ul>
+<li><a class="reference internal" href="#mycommon.utils.Session.setup_retry_adapter"><code class="docutils literal notranslate"><span class="pre">Session.setup_retry_adapter()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#mycommon.utils.copy_file_object"><code class="docutils literal notranslate"><span class="pre">copy_file_object()</span></code></a></li>
 <li><a class="reference internal" href="#mycommon.utils.copy_file_object_as_stream"><code class="docutils literal notranslate"><span class="pre">copy_file_object_as_stream()</span></code></a></li>
 </ul>
